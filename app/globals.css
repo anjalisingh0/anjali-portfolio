@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size: 16px;
+
+  /* Warm off-white + forest green palette */
+  --background: #f2f6f3;
+  --foreground: #152019;
+  --card: #ffffff;
+  --card-foreground: #152019;
+  --primary: #1f4d3a;
+  --primary-foreground: #f5faf7;
+  --primary-muted: rgba(31, 77, 58, 0.12);
+  --secondary: #dce8e1;
+  --secondary-foreground: #152019;
+  --muted: #e4ede8;
+  --muted-foreground: #4a5c52;
+  --accent: #2a6349;
+  --accent-foreground: #f5faf7;
+  --border: rgba(31, 77, 58, 0.16);
+  --border-strong: rgba(31, 77, 58, 0.28);
+  --input-background: #e4ede8;
+  --text-body: rgba(21, 32, 25, 0.9);
+  --text-subtle: rgba(21, 32, 25, 0.68);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Section rhythm utilities */
+.section-padding {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--foreground);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+  max-width: 42rem;
+}
+
+.card-surface {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-surface:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 24px rgba(31, 77, 58, 0.08);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
